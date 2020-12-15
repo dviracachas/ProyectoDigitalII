@@ -1,0 +1,53 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "CLKOUT3",
+					"strict" : false
+				},
+				{
+					"name" : "PWM3",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "dutty[4]",
+					"strict" : false
+				},
+				{
+					"name" : "dutty[5]",
+					"strict" : false
+				},
+				{
+					"name" : "dutty[6]",
+					"strict" : false
+				},
+				{
+					"name" : "dutty[7]",
+					"strict" : false
+				},
+				{
+					"name" : "dutty[0]",
+					"strict" : false
+				},
+				{
+					"name" : "dutty[3]",
+					"strict" : false
+				},
+				{
+					"name" : "dutty[1]",
+					"strict" : false
+				},
+				{
+					"name" : "dutty[2]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

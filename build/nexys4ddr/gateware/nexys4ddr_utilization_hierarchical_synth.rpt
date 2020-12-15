@@ -1,0 +1,38 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
+| Date         : Fri Dec 11 20:17:18 2020
+| Host         : david-x555lb running 64-bit Manjaro Linux
+| Command      : report_utilization -hierarchical -file nexys4ddr_utilization_hierarchical_synth.rpt
+| Design       : nexys4ddr
+| Device       : 7a100tcsg324-1
+| Design State : Synthesized
+-----------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++------------------------+-------------------+------------+------------+---------+------+------+--------+--------+------------+
+|        Instance        |       Module      | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs | RAMB36 | RAMB18 | DSP Blocks |
++------------------------+-------------------+------------+------------+---------+------+------+--------+--------+------------+
+| nexys4ddr              |             (top) |       3330 |       3226 |     104 |    0 | 2716 |    134 |      0 |          1 |
+|   (nexys4ddr)          |             (top) |        814 |        798 |      16 |    0 | 1494 |    134 |      0 |          1 |
+|   BloquePWM            |         BloquePWM |         30 |         30 |       0 |    0 |   32 |      0 |      0 |          0 |
+|     DivisorF           |        DivFreqPWM |          5 |          5 |       0 |    0 |   14 |      0 |      0 |          0 |
+|     MaquinaEstadosPWM1 | MaquinaEstadosPWM |          5 |          5 |       0 |    0 |    2 |      0 |      0 |          0 |
+|     pwm1               |               PWM |         21 |         21 |       0 |    0 |   16 |      0 |      0 |          0 |
+|   camara               |            camara |          1 |          1 |       0 |    0 |   26 |      0 |      0 |          0 |
+|   modulo_ir            |         modulo_ir |         52 |         52 |       0 |    0 |   35 |      0 |      0 |          0 |
+|   picorv32             |          picorv32 |       2433 |       2345 |      88 |    0 | 1129 |      0 |      0 |          0 |
+|     (picorv32)         |          picorv32 |       1745 |       1657 |      88 |    0 |  674 |      0 |      0 |          0 |
+|     pcpi_div           | picorv32_pcpi_div |        444 |        444 |       0 |    0 |  200 |      0 |      0 |          0 |
+|     pcpi_mul           | picorv32_pcpi_mul |        244 |        244 |       0 |    0 |  255 |      0 |      0 |          0 |
++------------------------+-------------------+------------+------------+---------+------+------+--------+--------+------------+
+
+

@@ -1,0 +1,22 @@
+
+module	divisorfrecgen	(input  clk1, output	reg	CLKOUT1	); // 100 kHz to 0.5 kHz
+
+  parameter top=8'b01100100;// top=100kHz/0.5kHz=200
+  reg [7:0] count_100;
+	//
+	initial
+	begin
+		CLKOUT1=1'b0;
+		count_100=0;
+	end
+	//
+	always @(posedge clk1)
+	begin
+		count_100 <= count_100 + 1;
+      if(count_100 == top)
+		begin
+			count_100<=0;
+			CLKOUT1 <= ~CLKOUT1;
+		end
+	end
+endmodule

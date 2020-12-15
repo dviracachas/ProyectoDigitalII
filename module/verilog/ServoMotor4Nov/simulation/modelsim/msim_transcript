@@ -1,0 +1,82 @@
+# Reading pref.tcl
+# do servo_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/juanj/OneDrive/Desktop/Ingenieria\ Electronica/Componente\ Teorico-Practico/Digital\ II/Laboratorio/ServoMotor4Nov {C:/Users/juanj/OneDrive/Desktop/Ingenieria Electronica/Componente Teorico-Practico/Digital II/Laboratorio/ServoMotor4Nov/servo.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:29:48 on Nov 06,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/juanj/OneDrive/Desktop/Ingenieria Electronica/Componente Teorico-Practico/Digital II/Laboratorio/ServoMotor4Nov" C:/Users/juanj/OneDrive/Desktop/Ingenieria Electronica/Componente Teorico-Practico/Digital II/Laboratorio/ServoMotor4Nov/servo.v 
+# -- Compiling module servo
+# ** Warning: C:/Users/juanj/OneDrive/Desktop/Ingenieria Electronica/Componente Teorico-Practico/Digital II/Laboratorio/ServoMotor4Nov/servo.v(18): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# ** Warning: C:/Users/juanj/OneDrive/Desktop/Ingenieria Electronica/Componente Teorico-Practico/Digital II/Laboratorio/ServoMotor4Nov/servo.v(19): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# ** Warning: C:/Users/juanj/OneDrive/Desktop/Ingenieria Electronica/Componente Teorico-Practico/Digital II/Laboratorio/ServoMotor4Nov/servo.v(20): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# Top level modules:
+# 	servo
+# End time: 13:29:48 on Nov 06,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 3
+# vlog -vlog01compat -work work +incdir+C:/Users/juanj/OneDrive/Desktop/Ingenieria\ Electronica/Componente\ Teorico-Practico/Digital\ II/Laboratorio/ServoMotor4Nov {C:/Users/juanj/OneDrive/Desktop/Ingenieria Electronica/Componente Teorico-Practico/Digital II/Laboratorio/ServoMotor4Nov/divisorfrecgen.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:29:49 on Nov 06,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/juanj/OneDrive/Desktop/Ingenieria Electronica/Componente Teorico-Practico/Digital II/Laboratorio/ServoMotor4Nov" C:/Users/juanj/OneDrive/Desktop/Ingenieria Electronica/Componente Teorico-Practico/Digital II/Laboratorio/ServoMotor4Nov/divisorfrecgen.v 
+# -- Compiling module divisorfrecgen
+# 
+# Top level modules:
+# 	divisorfrecgen
+# End time: 13:29:49 on Nov 06,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/juanj/OneDrive/Desktop/Ingenieria\ Electronica/Componente\ Teorico-Practico/Digital\ II/Laboratorio/ServoMotor4Nov {C:/Users/juanj/OneDrive/Desktop/Ingenieria Electronica/Componente Teorico-Practico/Digital II/Laboratorio/ServoMotor4Nov/generadorpwm3.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:29:49 on Nov 06,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/juanj/OneDrive/Desktop/Ingenieria Electronica/Componente Teorico-Practico/Digital II/Laboratorio/ServoMotor4Nov" C:/Users/juanj/OneDrive/Desktop/Ingenieria Electronica/Componente Teorico-Practico/Digital II/Laboratorio/ServoMotor4Nov/generadorpwm3.v 
+# -- Compiling module generadorpmw3
+# 
+# Top level modules:
+# 	generadorpmw3
+# End time: 13:29:49 on Nov 06,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/juanj/OneDrive/Desktop/Ingenieria\ Electronica/Componente\ Teorico-Practico/Digital\ II/Laboratorio/ServoMotor4Nov {C:/Users/juanj/OneDrive/Desktop/Ingenieria Electronica/Componente Teorico-Practico/Digital II/Laboratorio/ServoMotor4Nov/servo_TB.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:29:49 on Nov 06,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/juanj/OneDrive/Desktop/Ingenieria Electronica/Componente Teorico-Practico/Digital II/Laboratorio/ServoMotor4Nov" C:/Users/juanj/OneDrive/Desktop/Ingenieria Electronica/Componente Teorico-Practico/Digital II/Laboratorio/ServoMotor4Nov/servo_TB.v 
+# -- Compiling module servo_TB
+# 
+# Top level modules:
+# 	servo_TB
+# End time: 13:29:49 on Nov 06,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  servo_TB
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" servo_TB 
+# Start time: 13:29:49 on Nov 06,2020
+# Loading work.servo_TB
+# Loading work.servo
+# Loading work.divisorfrecgen
+# Loading work.generadorpmw3
+# 
+# add wave *
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: juanj  Hostname: LAPTOP-EV71N7K4  ProcessID: 9648
+#           Attempting to use alternate WLF file "./wlftbvvkhh".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftbvvkhh
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Error: (vsim-PLI-3536) $dumpvars() : The level argument (-1) must not be negative.    : C:/Users/juanj/OneDrive/Desktop/Ingenieria Electronica/Componente Teorico-Practico/Digital II/Laboratorio/ServoMotor4Nov/servo_TB.v(49)
+#    Time: 0 ps  Iteration: 0  Instance: /servo_TB
+# ** Note: $finish    : C:/Users/juanj/OneDrive/Desktop/Ingenieria Electronica/Componente Teorico-Practico/Digital II/Laboratorio/ServoMotor4Nov/servo_TB.v(50)
+#    Time: 300 ms  Iteration: 0  Instance: /servo_TB
+# End time: 13:32:04 on Nov 06,2020, Elapsed time: 0:02:15
+# Errors: 1, Warnings: 2

@@ -1,0 +1,52 @@
+|servo
+clk => clk.IN1
+dutty[0] => Decoder0.IN7
+dutty[1] => Decoder0.IN6
+dutty[2] => Decoder0.IN5
+dutty[3] => Decoder0.IN4
+dutty[4] => Decoder0.IN3
+dutty[5] => Decoder0.IN2
+dutty[6] => Decoder0.IN1
+dutty[7] => Decoder0.IN0
+CLKOUT3 <= CLKOUT3.DB_MAX_OUTPUT_PORT_TYPE
+PWM3 <= generadorpmw3:generadorpmw225.PMW3
+
+
+|servo|divisorfrecgen:divisorfrec225
+clk => CLKOUT3~reg0.CLK
+clk => count_278[0].CLK
+clk => count_278[1].CLK
+clk => count_278[2].CLK
+clk => count_278[3].CLK
+clk => count_278[4].CLK
+clk => count_278[5].CLK
+clk => count_278[6].CLK
+clk => count_278[7].CLK
+clk => count_278[8].CLK
+CLKOUT3 <= CLKOUT3~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|servo|generadorpmw3:generadorpmw225
+CLKOUT3 => counter[0].CLK
+CLKOUT3 => counter[1].CLK
+CLKOUT3 => counter[2].CLK
+CLKOUT3 => counter[3].CLK
+CLKOUT3 => counter[4].CLK
+CLKOUT3 => counter[5].CLK
+CLKOUT3 => counter[6].CLK
+CLKOUT3 => counter[7].CLK
+CLKOUT3 => counter[8].CLK
+CLKOUT3 => counter[9].CLK
+CLKOUT3 => counter[10].CLK
+CLKOUT3 => counter[11].CLK
+grados[0] => Add1.IN16
+grados[1] => Add1.IN15
+grados[2] => Add1.IN14
+grados[3] => Add1.IN13
+grados[4] => Add1.IN12
+grados[5] => Add1.IN11
+grados[6] => Add1.IN10
+grados[7] => Add1.IN9
+PMW3 <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
+
+
