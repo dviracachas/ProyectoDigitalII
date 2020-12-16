@@ -83,6 +83,7 @@ static void help(void)
 	puts("camara                          - camara test");
 	puts("car                             - Car main");
 	puts("pwm                             - Test PWM");
+	puts("infrarrojo                      - Test IR");
 }
 
 static void reboot(void)
@@ -178,6 +179,25 @@ static char read_camera(void){
 
 static void test_pwm(void){
 	pwm_cntrl_orden_write(4);
+	delay_ms(3000);
+	pwm_cntrl_orden_write(5);
+	delay_ms(3000);
+	pwm_cntrl_orden_write(6);
+	delay_ms(3000);
+	pwm_cntrl_orden_write(4);
+	delay_ms(3000);
+	pwm_cntrl_orden_write(5);
+	delay_ms(3000);
+	pwm_cntrl_orden_write(6);
+}
+
+static void test_ir(void){
+	infrarrojo_cntrl_ev_enable_write(1);
+	for (int i = 0; i < 10; i++){
+		unsigned short distancia_ir = infrarrojo_cntrl_distancia_read();
+		printf("La distancia es: %d\n", distancia_ir);
+		delay_ms(1000);
+	}
 }
 
 //****************** Programa completo del carro *******************/
@@ -454,6 +474,8 @@ static void console_service(void)
 		car_main();
 	else if(strcmp(token, "pwm") == 0)
 		test_pwm();
+	else if(strcmp(token, "ir") == 0)
+		test_ir();
 	prompt();
 }
 

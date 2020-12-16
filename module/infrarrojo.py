@@ -20,9 +20,3 @@ class Infrarrojo(Module,AutoCSR):
             io_ir_io = self.ir_io,
             o_distancia = self.distancia.status,
         )
-        
-        self.submodules.ev = EventManager()
-        self.ev.ok = EventSourceProcess()
-        self.ev.finalize()
- 
-        #self.ev.ok.trigger.eq(self.done.status)

@@ -46,7 +46,7 @@ module modulo_ir(
     end
     
     // Triestado para el pin de lectura y descarga
-    assign io = (leer) ? 1'bz : descarga; 
+    assign ir_io = (leer) ? 1'bz : descarga; 
     
     always@(posedge clk) begin
         // Reinicio
@@ -63,7 +63,7 @@ module modulo_ir(
         // Debemos descargar el capacitor por 1.3us cada 655us
         // Para 50MHz, 1 ciclo = 20ns ---> 65 ciclos cada 32750 ciclos
         // Para 100MHz, 1 ciclo = 10ns ---> 130 ciclos cada 65500 cilos
-        if (contador <= 65) begin
+        if (contador < 129) begin
             leer = 0;
             reg_descarga = 1; 
         end else begin
@@ -79,7 +79,7 @@ module modulo_ir(
             contador = 16'b0;
             ancho_pulso = cont_ancho;
             cont_ancho = 16'b0;
-            reg_distancia = ancho_pulso / 8;
+            reg_distancia = ancho_pulso;
         end
        
     end
