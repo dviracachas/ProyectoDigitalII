@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
-| Date         : Wed Dec 16 13:27:58 2020
+| Date         : Wed Dec 16 16:03:07 2020
 | Host         : david-x555lb running 64-bit Manjaro Linux
 | Command      : report_utilization -hierarchical -file nexys4ddr_utilization_hierarchical_place.rpt
 | Design       : nexys4ddr
@@ -22,7 +22,7 @@ Table of Contents
 |        Instance        |       Module      | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs | RAMB36 | RAMB18 | DSP Blocks |
 +------------------------+-------------------+------------+------------+---------+------+------+--------+--------+------------+
 | nexys4ddr              |             (top) |       3668 |       3548 |     120 |    0 | 2993 |    134 |      0 |          1 |
-|   (nexys4ddr)          |             (top) |       1077 |       1045 |      32 |    0 | 1719 |    134 |      0 |          1 |
+|   (nexys4ddr)          |             (top) |       1079 |       1047 |      32 |    0 | 1719 |    134 |      0 |          1 |
 |   BloquePWM            |         BloquePWM |         30 |         30 |       0 |    0 |   32 |      0 |      0 |          0 |
 |     DivisorF           |        DivFreqPWM |          5 |          5 |       0 |    0 |   14 |      0 |      0 |          0 |
 |     MaquinaEstadosPWM1 | MaquinaEstadosPWM |          5 |          5 |       0 |    0 |    2 |      0 |      0 |          0 |
@@ -39,9 +39,9 @@ Table of Contents
 |       divisorfrecgen0  |    divisorfrecgen |         12 |         12 |       0 |    0 |   11 |      0 |      0 |          0 |
 |       genpulsos0       |         genpulsos |          2 |          2 |       0 |    0 |    2 |      0 |      0 |          0 |
 |   modulo_ir            |         modulo_ir |         58 |         58 |       0 |    0 |   34 |      0 |      0 |          0 |
-|   picorv32             |          picorv32 |       2452 |       2364 |      88 |    0 | 1129 |      0 |      0 |          0 |
-|     (picorv32)         |          picorv32 |       1766 |       1678 |      88 |    0 |  674 |      0 |      0 |          0 |
-|     pcpi_div           | picorv32_pcpi_div |        442 |        442 |       0 |    0 |  200 |      0 |      0 |          0 |
+|   picorv32             |          picorv32 |       2450 |       2362 |      88 |    0 | 1129 |      0 |      0 |          0 |
+|     (picorv32)         |          picorv32 |       1762 |       1674 |      88 |    0 |  674 |      0 |      0 |          0 |
+|     pcpi_div           | picorv32_pcpi_div |        444 |        444 |       0 |    0 |  200 |      0 |      0 |          0 |
 |     pcpi_mul           | picorv32_pcpi_mul |        244 |        244 |       0 |    0 |  255 |      0 |      0 |          0 |
 +------------------------+-------------------+------------+------------+---------+------+------+--------+--------+------------+
 * Note: The sum of lower-level cells may be larger than their parent cells total, due to cross-hierarchy LUT combining

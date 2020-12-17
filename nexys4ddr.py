@@ -15,7 +15,7 @@ _io = [
     ("led",  8, Pins("V16"), IOStandard("LVCMOS33")),
     ("led",  9, Pins("T15"), IOStandard("LVCMOS33")),
     ("led", 10, Pins("U14"), IOStandard("LVCMOS33")),
-    ("led", 11, Pins("T16"), IOStandard("LVCMOS33")),
+  #  ("led", 11, Pins("T16"), IOStandard("LVCMOS33")),
 
     ("sw",  0, Pins("J15"), IOStandard("LVCMOS33")),
     ("sw",  1, Pins("L16"), IOStandard("LVCMOS33")),
@@ -34,14 +34,17 @@ _io = [
         Subsignal("r", Pins("N15")),
         Subsignal("g", Pins("M16")),
         Subsignal("b", Pins("R12")),
-        IOStandard("LVCMOS33")),
+        IOStandard("LVCMOS33")
+    ),
 
     ("ledRGB", 2,
         Subsignal("r", Pins("N16")),
         Subsignal("g", Pins("R11")),
         Subsignal("b", Pins("G14")),
-        IOStandard("LVCMOS33")),
-       
+        IOStandard("LVCMOS33")
+    ),
+
+
     ("display_digit",  0, Pins("J17"), IOStandard("LVCMOS33")),
     ("display_digit",  1, Pins("J18"), IOStandard("LVCMOS33")),
     ("display_digit",  2, Pins("T9"), IOStandard("LVCMOS33")),
@@ -89,10 +92,8 @@ _io = [
     ("cam_data_in", 5, Pins("U12"), IOStandard("LVCMOS33")),
     ("cam_data_in", 6, Pins("U11"), IOStandard("LVCMOS33")),
     ("cam_data_in", 7, Pins("V10"), IOStandard("LVCMOS33")),
-
-
-
-    ("ir_inout", 0, Pins("C17"), IOStandard("LVCMOS33")),
+    
+     ("ir_inout", 0, Pins("C17"), IOStandard("LVCMOS33")),
 
     ("pwm_out", 0, Pins("D18"), IOStandard("LVCMOS33")),
 
@@ -100,10 +101,12 @@ _io = [
     ("us_echo", 0, Pins("G17"), IOStandard("LVCMOS33")),
 
     ("uart1", 0,
-        Subsignal("tx", Pins("D14")),
-        Subsignal("rx", Pins("F16")),
+        Subsignal("tx", Pins("H4")),
+        Subsignal("rx", Pins("H1")),
         IOStandard("LVCMOS33"),
     ), 
+
+
 
     ("cpu_reset", 0, Pins("C12"), IOStandard("LVCMOS33")),
     ("clk", 0, Pins("E3"), IOStandard("LVCMOS33")),

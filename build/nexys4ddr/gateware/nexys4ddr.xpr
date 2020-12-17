@@ -3,10 +3,10 @@
 <!--                                                         -->
 <!-- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="49" Path="/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/build/nexys4ddr/gateware/nexys4ddr.xpr">
+<Project Version="7" Minor="49" Path="/home/davidviralo/Documentos/Vivado/WP07_SoC_initial_include_uart_i2c/include_uart_i2c/build/nexys4ddr/gateware/nexys4ddr.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="a87ffa7f3b714e779180401fbd0ea921"/>
+    <Option Name="Id" Val="426ae72999ab48329f197487918a3327"/>
     <Option Name="Part" Val="xc7a100tcsg324-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>

@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
-| Date         : Wed Dec 16 13:27:59 2020
+| Date         : Wed Dec 16 16:03:08 2020
 | Host         : david-x555lb running 64-bit Manjaro Linux
 | Command      : report_clock_utilization -file nexys4ddr_clock_utilization.rpt
 | Design       : nexys4ddr
@@ -76,11 +76,11 @@ Table of Contents
 +----------+-----------------+------------+-------------------+--------------+-------------+-----------------+--------------+-------+------------------------------------------------------------------+------------------------------------------------------------+
 | Local Id | Driver Type/Pin | Constraint | Site/BEL          | Clock Region | Clock Loads | Non-Clock Loads | Clock Period | Clock | Driver Pin                                                       | Net                                                        |
 +----------+-----------------+------------+-------------------+--------------+-------------+-----------------+--------------+-------+------------------------------------------------------------------+------------------------------------------------------------||
-| 0        | FDRE/Q          | None       | SLICE_X30Y109/AFF | X0Y2         |          16 |               1 |              |       | BloquePWM/DivisorF/clkout_reg/Q                                  | BloquePWM/DivisorF/clkout                                  - Static -
-| 1        | FDRE/Q          | None       | SLICE_X31Y114/AFF | X0Y2         |          16 |               1 |              |       | bloqueultrasonido/ultrasonido0/divisorfrecd0/CLKOUTD_reg/Q       | bloqueultrasonido/ultrasonido0/divisorfrecd0/CLKOUTD       - Static -
-| 2        | FDRE/Q          | None       | SLICE_X30Y116/AFF | X0Y2         |          10 |               1 |              |       | bloqueultrasonido/ultrasonido0/divisorfrec0/CLKOUT_reg/Q         | bloqueultrasonido/ultrasonido0/divisorfrec0/CLK            - Static -
-| 3        | FDRE/Q          | None       | SLICE_X32Y117/AFF | X0Y2         |           2 |               1 |              |       | bloqueultrasonido/maquinadeestados0/divisorfrecme0/CLKOUT2_reg/Q | bloqueultrasonido/maquinadeestados0/divisorfrecme0/CLKOUT2 - Static -
-| 4        | FDRE/Q          | None       | SLICE_X29Y113/AFF | X0Y2         |           2 |               1 |              |       | bloqueultrasonido/ultrasonido0/divisorfrecgen0/CLKOUT1_reg/Q     | bloqueultrasonido/ultrasonido0/divisorfrecgen0/CLKOUT1     - Static -
+| 0        | FDRE/Q          | None       | SLICE_X30Y101/AFF | X0Y2         |          16 |               1 |              |       | BloquePWM/DivisorF/clkout_reg/Q                                  | BloquePWM/DivisorF/clkout                                  - Static -
+| 1        | FDRE/Q          | None       | SLICE_X33Y99/AFF  | X0Y1         |          16 |               1 |              |       | bloqueultrasonido/ultrasonido0/divisorfrecd0/CLKOUTD_reg/Q       | bloqueultrasonido/ultrasonido0/divisorfrecd0/CLKOUTD       - Static -
+| 2        | FDRE/Q          | None       | SLICE_X30Y106/AFF | X0Y2         |          10 |               1 |              |       | bloqueultrasonido/ultrasonido0/divisorfrec0/CLKOUT_reg/Q         | bloqueultrasonido/ultrasonido0/divisorfrec0/CLK            - Static -
+| 3        | FDRE/Q          | None       | SLICE_X30Y104/AFF | X0Y2         |           2 |               1 |              |       | bloqueultrasonido/maquinadeestados0/divisorfrecme0/CLKOUT2_reg/Q | bloqueultrasonido/maquinadeestados0/divisorfrecme0/CLKOUT2 - Static -
+| 4        | FDRE/Q          | None       | SLICE_X28Y102/AFF | X0Y2         |           2 |               1 |              |       | bloqueultrasonido/ultrasonido0/divisorfrecgen0/CLKOUT1_reg/Q     | bloqueultrasonido/ultrasonido0/divisorfrecgen0/CLKOUT1     - Static -
 +----------+-----------------+------------+-------------------+--------------+-------------+-----------------+--------------+-------+------------------------------------------------------------------+------------------------------------------------------------||
 * Local Clocks in this context represents only clocks driven by non-global buffers
 ** Clock Loads column represents the clock pin loads (pin count)
@@ -97,10 +97,10 @@ Table of Contents
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
 | X0Y0              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  2600 |    0 |   600 |    0 |    20 |   10 |    10 |    0 |    20 |
 | X1Y0              |    1 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     4 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |  1500 |    0 |   550 |    0 |    40 |   20 |    20 |    0 |    40 |
-| X0Y1              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  356 |  2000 |  122 |   600 |    0 |    20 |   10 |    10 |    1 |    20 |
-| X1Y1              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  115 |  1900 |   49 |   650 |    0 |    60 |   29 |    30 |    0 |    40 |
-| X0Y2              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 | 2111 |  2000 |  525 |   600 |    0 |    20 |   10 |    10 |    0 |    20 |
-| X1Y2              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  411 |  1900 |  172 |   650 |    0 |    60 |   30 |    30 |    0 |    40 |
+| X0Y1              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 | 1554 |  2000 |  411 |   600 |    0 |    20 |   10 |    10 |    0 |    20 |
+| X1Y1              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  698 |  1900 |  305 |   650 |    0 |    60 |   30 |    30 |    0 |    40 |
+| X0Y2              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  317 |  2000 |   62 |   600 |    0 |    20 |   10 |    10 |    0 |    20 |
+| X1Y2              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  424 |  1900 |  168 |   650 |    0 |    60 |   29 |    30 |    1 |    40 |
 | X0Y3              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  2600 |    0 |   600 |    0 |    20 |   10 |    10 |    0 |    20 |
 | X1Y3              |    1 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     4 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |  1350 |    0 |   500 |    0 |    30 |   15 |    15 |    0 |    40 |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
@@ -139,8 +139,8 @@ All Modules
 |    | X0    | X1   |
 +----+-------+------+
 | Y3 |    10 |   15 |
-| Y2 |  2075 |  441 |
-| Y1 |   367 |  144 |
+| Y2 |   322 |  454 |
+| Y1 |  1523 |  728 |
 | Y0 |    10 |   20 |
 +----+-------+------+
 
@@ -174,11 +174,11 @@ All Modules
 10. Clock Region Cell Placement per Global Clock: Region X0Y1
 -------------------------------------------------------------
 
-+-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+---------------+
-| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net           |
-+-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+---------------+
-| g0        | n/a   | BUFG/O          | None       |         367 |               0 | 356 |      0 |   10 |   1 |  0 |    0 |   0 |       0 | clk_IBUF_BUFG |
-+-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+---------------+
++-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+---------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net           |
++-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+---------------+
+| g0        | n/a   | BUFG/O          | None       |        1523 |               0 | 1513 |      0 |   10 |   0 |  0 |    0 |   0 |       0 | clk_IBUF_BUFG |
++-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+---------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
 *** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
@@ -190,7 +190,7 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+---------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net           |
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+---------------+
-| g0        | n/a   | BUFG/O          | None       |         144 |               0 | 115 |      0 |   29 |   0 |  0 |    0 |   0 |       0 | clk_IBUF_BUFG |
+| g0        | n/a   | BUFG/O          | None       |         728 |               0 | 698 |      0 |   30 |   0 |  0 |    0 |   0 |       0 | clk_IBUF_BUFG |
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+---------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
@@ -200,11 +200,11 @@ All Modules
 12. Clock Region Cell Placement per Global Clock: Region X0Y2
 -------------------------------------------------------------
 
-+-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+---------------+
-| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net           |
-+-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+---------------+
-| g0        | n/a   | BUFG/O          | None       |        2075 |               0 | 2065 |      0 |   10 |   0 |  0 |    0 |   0 |       0 | clk_IBUF_BUFG |
-+-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+---------------+
++-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+---------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net           |
++-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+---------------+
+| g0        | n/a   | BUFG/O          | None       |         322 |               0 | 312 |      0 |   10 |   0 |  0 |    0 |   0 |       0 | clk_IBUF_BUFG |
++-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+---------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
 *** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
@@ -216,7 +216,7 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+---------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net           |
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+---------------+
-| g0        | n/a   | BUFG/O          | None       |         441 |               0 | 411 |      0 |   30 |   0 |  0 |    0 |   0 |       0 | clk_IBUF_BUFG |
+| g0        | n/a   | BUFG/O          | None       |         454 |               0 | 424 |      0 |   29 |   1 |  0 |    0 |   0 |       0 | clk_IBUF_BUFG |
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+---------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)

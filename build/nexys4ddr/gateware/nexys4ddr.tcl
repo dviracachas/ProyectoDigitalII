@@ -6,25 +6,25 @@ set_msg_config -id {Common 17-55} -new_severity {Warning}
 
 # Add Sources
 
-read_verilog {/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/camara.v}
-read_verilog {/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/Infrarrojo/modulo_ir.v}
-read_verilog {/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/PWM/BloquePWM.v}
-read_verilog {/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/PWM/PWM.v}
-read_verilog {/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/PWM/MaquinaEstadosPWM.v}
-read_verilog {/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/PWM/DivFreqPWM.v}
-read_verilog {/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/Ultrasonido(NexysA7)/bloqueultrasonido.v}
-read_verilog {/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/Ultrasonido(NexysA7)/contador.v}
-read_verilog {/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/Ultrasonido(NexysA7)/divisor.v}
-read_verilog {/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/Ultrasonido(NexysA7)/divisorfrec.v}
-read_verilog {/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/Ultrasonido(NexysA7)/divisorfrecd.v}
-read_verilog {/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/Ultrasonido(NexysA7)/divisorfrecgen.v}
-read_verilog {/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/Ultrasonido(NexysA7)/divisorfrecme.v}
-read_verilog {/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/Ultrasonido(NexysA7)/genpulsos.v}
-read_verilog {/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/Ultrasonido(NexysA7)/maquinadeestados.v}
-read_verilog {/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/Ultrasonido(NexysA7)/meultrasonido.v}
-read_verilog {/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/Ultrasonido(NexysA7)/ultrasonido.v}
+read_verilog {/home/davidviralo/Documentos/Vivado/WP07_SoC_initial_include_uart_i2c/include_uart_i2c/module/verilog/camara.v}
+read_verilog {/home/davidviralo/Documentos/Vivado/WP07_SoC_initial_include_uart_i2c/include_uart_i2c/module/verilog/Infrarrojo/modulo_ir.v}
+read_verilog {/home/davidviralo/Documentos/Vivado/WP07_SoC_initial_include_uart_i2c/include_uart_i2c/module/verilog/PWM/BloquePWM.v}
+read_verilog {/home/davidviralo/Documentos/Vivado/WP07_SoC_initial_include_uart_i2c/include_uart_i2c/module/verilog/PWM/PWM.v}
+read_verilog {/home/davidviralo/Documentos/Vivado/WP07_SoC_initial_include_uart_i2c/include_uart_i2c/module/verilog/PWM/MaquinaEstadosPWM.v}
+read_verilog {/home/davidviralo/Documentos/Vivado/WP07_SoC_initial_include_uart_i2c/include_uart_i2c/module/verilog/PWM/DivFreqPWM.v}
+read_verilog {/home/davidviralo/Documentos/Vivado/WP07_SoC_initial_include_uart_i2c/include_uart_i2c/module/verilog/Ultrasonido(NexysA7)/bloqueultrasonido.v}
+read_verilog {/home/davidviralo/Documentos/Vivado/WP07_SoC_initial_include_uart_i2c/include_uart_i2c/module/verilog/Ultrasonido(NexysA7)/contador.v}
+read_verilog {/home/davidviralo/Documentos/Vivado/WP07_SoC_initial_include_uart_i2c/include_uart_i2c/module/verilog/Ultrasonido(NexysA7)/divisor.v}
+read_verilog {/home/davidviralo/Documentos/Vivado/WP07_SoC_initial_include_uart_i2c/include_uart_i2c/module/verilog/Ultrasonido(NexysA7)/divisorfrec.v}
+read_verilog {/home/davidviralo/Documentos/Vivado/WP07_SoC_initial_include_uart_i2c/include_uart_i2c/module/verilog/Ultrasonido(NexysA7)/divisorfrecd.v}
+read_verilog {/home/davidviralo/Documentos/Vivado/WP07_SoC_initial_include_uart_i2c/include_uart_i2c/module/verilog/Ultrasonido(NexysA7)/divisorfrecgen.v}
+read_verilog {/home/davidviralo/Documentos/Vivado/WP07_SoC_initial_include_uart_i2c/include_uart_i2c/module/verilog/Ultrasonido(NexysA7)/divisorfrecme.v}
+read_verilog {/home/davidviralo/Documentos/Vivado/WP07_SoC_initial_include_uart_i2c/include_uart_i2c/module/verilog/Ultrasonido(NexysA7)/genpulsos.v}
+read_verilog {/home/davidviralo/Documentos/Vivado/WP07_SoC_initial_include_uart_i2c/include_uart_i2c/module/verilog/Ultrasonido(NexysA7)/maquinadeestados.v}
+read_verilog {/home/davidviralo/Documentos/Vivado/WP07_SoC_initial_include_uart_i2c/include_uart_i2c/module/verilog/Ultrasonido(NexysA7)/meultrasonido.v}
+read_verilog {/home/davidviralo/Documentos/Vivado/WP07_SoC_initial_include_uart_i2c/include_uart_i2c/module/verilog/Ultrasonido(NexysA7)/ultrasonido.v}
 read_verilog {/opt/litex/pythondata-cpu-picorv32/pythondata_cpu_picorv32/verilog/picorv32.v}
-read_verilog {/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/build/nexys4ddr/gateware/nexys4ddr.v}
+read_verilog {/home/davidviralo/Documentos/Vivado/WP07_SoC_initial_include_uart_i2c/include_uart_i2c/build/nexys4ddr/gateware/nexys4ddr.v}
 
 # Add EDIFs
 

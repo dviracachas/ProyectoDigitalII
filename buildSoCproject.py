@@ -11,7 +11,10 @@ from litex.soc.integration.soc_core import *
 from litex.soc.integration.builder import *
 from litex.soc.interconnect.csr import *
 
+from litex.soc.integration.soc import *
+
 from litex.soc.cores import gpio
+from litex.soc.cores import uart
 from module import rgbled
 from module import sevensegment
 from module import vgacontroller
@@ -53,7 +56,7 @@ class BaseSoC(SoCCore):
 		platform.add_source("module/verilog/Ultrasonido(NexysA7)/maquinadeestados.v")
 		platform.add_source("module/verilog/Ultrasonido(NexysA7)/meultrasonido.v")
 		platform.add_source("module/verilog/Ultrasonido(NexysA7)/ultrasonido.v")
-
+		clk_freq =100e6
 
 		# SoC with CPU
 		SoCCore.__init__(self, platform,
@@ -104,24 +107,13 @@ class BaseSoC(SoCCore):
 		
 		
 		#camara
-		""" SoCCore.add_csr(self,"camara_cntrl")
+		"""
+		/* SoCCore.add_csr(self,"camara_cntrl")
 		SoCCore.add_interrupt(self,"camara_cntrl")
 		cam_data_in = Cat(*[platform.request("cam_data_in", i) for i in range(8)])		
-		self.submodules.camara_cntrl = camara.Camara(platform.request("cam_xclk"),platform.request("cam_pclk"),cam_data_in)
- """
-		#Infrarrojo
-		SoCCore.add_csr(self,"infrarrojo_cntrl")
-		self.submodules.infrarrojo_cntrl = infrarrojo.Infrarrojo(platform.request("ir_inout"))
-
-		#PWM
-		SoCCore.add_csr(self,"pwm_cntrl")
-		self.submodules.pwm_cntrl = pwm.PWM(platform.request("pwm_out"))
-
-		#Ultrasonido
-		SoCCore.add_csr(self, "ultrasonido")
-		self.submodules.ultrasonido = ultrasonido.Ultrasonido(platform.request("us_trigger"), platform.request("us_echo"))
-
-		#UART1
+		self.submodules.camara_cntrl = 		camara.Camara(platform.request("cam_xclk"),platform.request("cam_pclk"),cam_data_in)
+		"""
+		#serialA
 		from litex.soc.cores import uart
 		self.submodules.uart1_phy = uart.UARTPHY(
 			pads     = platform.request("uart1"),
@@ -136,8 +128,24 @@ class BaseSoC(SoCCore):
 			self.irq.add("uart1", use_loc_if_exists=True)
 		else:
 			self.add_constant("UART_POLLING")
+			
+		#Infrarrojo
+		SoCCore.add_csr(self,"infrarrojo_cntrl")
+		self.submodules.infrarrojo_cntrl = infrarrojo.Infrarrojo(platform.request("ir_inout"))
+
+		#PWM
+		SoCCore.add_csr(self,"pwm_cntrl")
+		self.submodules.pwm_cntrl = pwm.PWM(platform.request("pwm_out"))
+
+		#Ultrasonido
+		SoCCore.add_csr(self, "ultrasonido")
+		self.submodules.ultrasonido = ultrasonido.Ultrasonido(platform.request("us_trigger"), platform.request("us_echo"))
+
+	
 
 # Build --------------------------------------------------------------------------------------------
+
+
 if __name__ == "__main__":
 	builder = Builder(BaseSoC(),csr_csv="Soc_MemoryMap.csv")
 	builder.build()

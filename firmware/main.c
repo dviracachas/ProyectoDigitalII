@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdbool.h> 
+#include <stdbool.h>
 #include <stdlib.h>
 #include <string.h>
 
@@ -83,8 +83,12 @@ static void help(void)
 	puts("vga                             - vga test");
 	puts("camara                          - camara test");
 	puts("car                             - Car main");
+	puts("us                              - Test US");
 	puts("pwm                             - Test PWM");
-	puts("infrarrojo                      - Test IR");
+	puts("ir                              - Test IR");
+	puts("uart                            - Test UART1");
+	puts("motor                           - Rotate car");
+	puts("av                              - Test Avanzar");
 }
 
 static void reboot(void)
@@ -127,23 +131,30 @@ static void rotate_char_array_left(char array[], int size){
 
 static void rotate_car(bool right){
 	if (right){
-		// write_uart('H');
-		// delay(500);
-		// write_uart('I');
 		printf("Rotación a la derecha\n");
+		uart1_write('J');
+		delay_ms(350);
+		uart1_write('I');
+		delay_ms(500);
 	} else {
 		printf("Rotación a la izquierda\n");
+		uart1_write('H');
+		delay_ms(350);
+		uart1_write('I');
+		delay_ms(500);
 	}
 }
 
 static void forward(void){
-	// write_uart('G');
-	// bool stop = false;
-	// while(!stop) {
-	// 		if (infrarrojo = 1)
-	//			stop = true;
-	// }
 	printf("Avanzando\n");
+	bool stop = false;
+	uart1_write('G');
+	while(!stop) {
+		if (infrarrojo_cntrl_distancia_read()>2)
+			stop = true;
+	}
+	uart1_write('I');
+	delay_ms(500);
 }
 
 static void rotate_servo(char direction[]){
@@ -193,25 +204,23 @@ static void test_pwm(void){
 }
 
 static void test_ir(void){
-	for (int i = 0; i < 10; i++){
-		unsigned short distancia_ir = infrarrojo_cntrl_distancia_read();
-		printf("La distancia es: %d\n", distancia_ir);
-		delay_ms(1000);
-	}
+	while(!(buttons_in_read()&1)) {
+		leds_out_write(infrarrojo_cntrl_distancia_read());
+		delay_ms(50);
+		}
 }
 
 static void test_us(void){
-	for (int i = 0; i < 10; i++){
+	while(!(buttons_in_read()&1)) {
 		ultrasonido_orden_write(1);
 		bool done = false;
 		while(!done){
 			done = ultrasonido_done_read();
 		}
-		unsigned short distancia_us = ultrasonido_d_read();
-		printf("La distancia es: %d\n", distancia_us);
+		leds_out_write(ultrasonido_d_read());
 		ultrasonido_orden_write(0);
-		delay_ms(1000);
-	}
+		delay_ms(50);
+		}
 }
 
 static void uart1_test(void){
@@ -225,6 +234,11 @@ static void uart1_test(void){
 		delay_ms(50);
 		uart_write(uart1_read());
 		}
+}
+
+static void motor_test(void){
+	rotate_car(false);
+	rotate_car(true);
 }
 
 //****************** Programa completo del carro *******************/
@@ -339,9 +353,10 @@ static void car_main(void){
 	}
 }
 
+
 static void display_test(void)
 {
-/*	int i;
+	int i;
 	signed char defill = 0;	//1->left, -1->right, 0->.
 	
 	char txtToDisplay[40] = {0, DISPLAY_0, DISPLAY_1,DISPLAY_2,DISPLAY_3,DISPLAY_4,DISPLAY_5,DISPLAY_6,DISPLAY_7,DISPLAY_8,DISPLAY_9,DISPLAY_A,DISPLAY_B,DISPLAY_C,DISPLAY_D,DISPLAY_E,DISPLAY_F,DISPLAY_G,DISPLAY_H,DISPLAY_I,DISPLAY_J,DISPLAY_K,DISPLAY_L,DISPLAY_M,DISPLAY_N,DISPLAY_O,DISPLAY_P,DISPLAY_Q,DISPLAY_R,DISPLAY_S,DISPLAY_T,DISPLAY_U,DISPLAY_V,DISPLAY_W,DISPLAY_X,DISPLAY_Y,DISPLAY_Z,DISPLAY_DP,DISPLAY_TR,DISPLAY_UR};
@@ -366,7 +381,7 @@ static void display_test(void)
 		}
 		delay_ms(500);
 	}
-*/
+
 }
 
 static void led_test(void)
@@ -455,23 +470,8 @@ static void vga_test(void)
 			vga_cntrl_mem_we_write(1);
 		}
 	}
-}
 
-/* static void camara_test(void)
-{
-	unsigned short temp2 =0xFF;
-	printf("Test del los camara... se interrumpe con el botton 1\n");
-	while(!(buttons_in_read()&1)) {
-		unsigned short temp = camara_cntrl_mem_px_data_read();
-		if (temp2 != temp){
-			printf("el bus de la camara es : %i\n", temp);
-			printf("el boton de la camara esta en: %i\n",camara_cntrl_done_read());
-			printf("la habilitacion de la interrupción esta en : %i %i %i\n",camara_cntrl_ev_enable_read(), camara_cntrl_ev_status_read(), camara_cntrl_ev_pending_read());
-			camara_isr();
-			temp2 = temp;
-		}
-	}
-} */
+}
 
 static void console_service(void)
 {
@@ -495,9 +495,8 @@ static void console_service(void)
 		rgbled_test();
 	else if(strcmp(token, "vga") == 0)
 		vga_test();
-	else if(strcmp(token, "camara") == 0)
-	//	camara_test();
-		car_main();
+	else if(strcmp(token, "av") == 0)
+		forward();
 	else if(strcmp(token, "car") == 0)
 		car_main();
 	else if(strcmp(token, "pwm") == 0)
@@ -508,6 +507,8 @@ static void console_service(void)
 		test_us();
 	else if(strcmp(token, "uart") == 0)
 		uart1_test();
+	else if(strcmp(token, "motor") == 0)
+		motor_test();
 	prompt();
 }
 
@@ -517,13 +518,16 @@ int main(void)
 	irq_setie(1);
 	uart_init();
 	camara_init();
+	/*Se adiciona un serial mas */
 	uart1_init();
 
-	puts("\nSoC - RiscV project UNAL 2020-2-- CPU testing software  interrupt "__DATE__" "__TIME__"\n");
+
+	puts("\nSoC - RiscV project UNAL 2020-2-- CPU testing software  uart add "__DATE__" "__TIME__"\n");
 	help();
 	prompt();
 
 	while(1) {
+	//	uart1_test();
 		console_service();
 	}
 

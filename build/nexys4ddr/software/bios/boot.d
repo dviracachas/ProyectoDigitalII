@@ -9,10 +9,10 @@ boot.o: /opt/litex/litex/litex/soc/software/bios/boot.c \
  /opt/litex/litex/litex/soc/software/include/base/crc.h \
  /opt/litex/litex/litex/soc/software/include/base/string.h \
  /opt/litex/litex/litex/soc/cores/cpu/picorv32/irq.h \
- /home/davidviralo/Documentos/Vivado/WP06_SoC_initial_include_verilog/SoC_project_includeVerilog/build/nexys4ddr/software/include/generated/csr.h \
- /home/davidviralo/Documentos/Vivado/WP06_SoC_initial_include_verilog/SoC_project_includeVerilog/build/nexys4ddr/software/include/generated/soc.h \
+ /home/davidviralo/Documentos/Vivado/WP07_SoC_initial_include_uart_i2c/include_uart_i2c/build/nexys4ddr/software/include/generated/csr.h \
+ /home/davidviralo/Documentos/Vivado/WP07_SoC_initial_include_uart_i2c/include_uart_i2c/build/nexys4ddr/software/include/generated/soc.h \
  /opt/litex/litex/litex/soc/software/include/hw/common.h \
- /home/davidviralo/Documentos/Vivado/WP06_SoC_initial_include_verilog/SoC_project_includeVerilog/build/nexys4ddr/software/include/generated/mem.h \
+ /home/davidviralo/Documentos/Vivado/WP07_SoC_initial_include_uart_i2c/include_uart_i2c/build/nexys4ddr/software/include/generated/mem.h \
  /opt/litex/litex/litex/soc/software/bios/sfl.h \
  /opt/litex/litex/litex/soc/software/bios/boot.h \
  /opt/litex/litex/litex/soc/software/include/base/jsmn.h \
@@ -46,13 +46,13 @@ boot.o: /opt/litex/litex/litex/soc/software/bios/boot.c \
 
 /opt/litex/litex/litex/soc/cores/cpu/picorv32/irq.h:
 
-/home/davidviralo/Documentos/Vivado/WP06_SoC_initial_include_verilog/SoC_project_includeVerilog/build/nexys4ddr/software/include/generated/csr.h:
+/home/davidviralo/Documentos/Vivado/WP07_SoC_initial_include_uart_i2c/include_uart_i2c/build/nexys4ddr/software/include/generated/csr.h:
 
-/home/davidviralo/Documentos/Vivado/WP06_SoC_initial_include_verilog/SoC_project_includeVerilog/build/nexys4ddr/software/include/generated/soc.h:
+/home/davidviralo/Documentos/Vivado/WP07_SoC_initial_include_uart_i2c/include_uart_i2c/build/nexys4ddr/software/include/generated/soc.h:
 
 /opt/litex/litex/litex/soc/software/include/hw/common.h:
 
-/home/davidviralo/Documentos/Vivado/WP06_SoC_initial_include_verilog/SoC_project_includeVerilog/build/nexys4ddr/software/include/generated/mem.h:
+/home/davidviralo/Documentos/Vivado/WP07_SoC_initial_include_uart_i2c/include_uart_i2c/build/nexys4ddr/software/include/generated/mem.h:
 
 /opt/litex/litex/litex/soc/software/bios/sfl.h:
 
