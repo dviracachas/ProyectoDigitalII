@@ -12,4 +12,7 @@ make clean
 echo 'make done'
 echo '================================'
 cd .. 
-litex_term.py /dev/ttyUSB1 --kernel firmware/firmware.bin
+
+sudo chmod 777 /dev/ttyUSB1
+litex_term /dev/ttyUSB1 --kernel firmware/firmware.bin
+
