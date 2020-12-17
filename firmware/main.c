@@ -157,11 +157,7 @@ static void forward(void){
 	delay_ms(500);
 }
 
-static void rotate_servo(char direction[]){
-	printf("%s: ", direction);
-}
-
-static bool read_servo(void){
+/* static bool read_servo(void){
 	unsigned short temp2 =0;
 	while(!(buttons_in_read()&1)) {
 		unsigned short temp = switchs_in_read();
@@ -182,6 +178,18 @@ static bool read_servo(void){
 	delay_ms(500);
 	
 	return wall;
+} */
+
+static bool read_us(void){
+	ultrasonido_orden_write(1);
+	bool done = false;
+	while(!done){
+		done = ultrasonido_done_read();
+	}
+	if(ultrasonido_d_read()<5)
+		return 1;
+	else
+		return 0;
 }
 
 static char read_camera(void){
@@ -257,16 +265,16 @@ static void car_main(void){
 		char color[4] = {"NNNN"};  // Obstáculos (colores) en dirección absoluta (al final)
 		
 		// Adquirimos nuestros datos de la coordenada en dirección relativa
-		rotate_servo("left");
-		walls[0] = read_servo();
+		pwm_cntrl_orden_write(4);
+		walls[0] = read_us();
 		color[0] = read_camera();
 
-		rotate_servo("right");
-		walls[2] = read_servo();
+		pwm_cntrl_orden_write(6);
+		walls[2] = read_us();
 		color[2] = read_camera();
 		
-		rotate_servo("forward");
-		walls[1] = read_servo();
+		pwm_cntrl_orden_write(5);
+		walls[1] = read_us();
 		color[1] = read_camera();
 
 		// Reservamos nuestra referencia de qué camino está libre para después
