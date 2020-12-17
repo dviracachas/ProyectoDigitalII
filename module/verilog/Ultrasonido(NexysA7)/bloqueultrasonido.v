@@ -1,10 +1,11 @@
 module	bloqueultrasonido	(
 					output	[7:0]	d,
-					output 		trigg,
-					output 		DONE,
+					output 		trigger,
+					output 		done,
 					input		clk,
-                                  	input		orden,
-					input 		ECHO
+                    input		orden,
+					input 		echo,
+					input 		rst
 				);
 maquinadeestados		maquinadeestados0	(
 								.orden	(		orden		),
@@ -16,9 +17,9 @@ ultrasonido			ultrasonido0		(
 								.clk	(		clk		),
 								.ENABLE	(		ENABLE		),
 								.reset	(		reset		),
-								.ECHO	(		ECHO		),
+								.ECHO	(		echo		),
 								.d	(		d		),
-								.trigg	(		trigg		),
-								.DONE	(		DONE		)
+								.trigg	(		trigger		),
+								.DONE	(		done		)
 							);
 endmodule

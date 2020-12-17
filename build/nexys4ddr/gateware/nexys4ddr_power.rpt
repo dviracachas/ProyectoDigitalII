@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
-| Date             : Fri Dec 11 20:18:49 2020
+| Date             : Wed Dec 16 13:28:47 2020
 | Host             : david-x555lb running 64-bit Manjaro Linux
 | Command          : report_power -file nexys4ddr_power.rpt
 | Design           : nexys4ddr
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+----------------------------------+
-| Total On-Chip Power (W)  | 35.184 (Junction temp exceeded!) |
+| Total On-Chip Power (W)  | 36.496 (Junction temp exceeded!) |
 | Design Power Budget (W)  | Unspecified*                     |
 | Power Budget Margin (W)  | NA                               |
-| Dynamic (W)              | 34.305                           |
+| Dynamic (W)              | 35.617                           |
 | Device Static (W)        | 0.879                            |
 | Effective TJA (C/W)      | 4.6                              |
 | Max Ambient (C)          | 0.0                              |
@@ -52,20 +52,20 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Slice Logic              |     8.134 |     7114 |       --- |             --- |
-|   LUT as Logic           |     6.558 |     3324 |     63400 |            5.24 |
-|   CARRY4                 |     0.859 |      353 |     15850 |            2.23 |
-|   Register               |     0.393 |     2737 |    126800 |            2.16 |
-|   LUT as Distributed RAM |     0.318 |      104 |     19000 |            0.55 |
+| Slice Logic              |     8.706 |     7705 |       --- |             --- |
+|   LUT as Logic           |     6.988 |     3548 |     63400 |            5.60 |
+|   CARRY4                 |     0.970 |      371 |     15850 |            2.34 |
+|   Register               |     0.468 |     2993 |    126800 |            2.36 |
+|   LUT as Distributed RAM |     0.275 |      120 |     19000 |            0.63 |
 |   BUFG                   |     0.006 |        1 |        32 |            3.13 |
-|   Others                 |     0.000 |       22 |       --- |             --- |
-|   F7/F8 Muxes            |     0.000 |       18 |     63400 |            0.03 |
-| Signals                  |    10.853 |     5604 |       --- |             --- |
-| Block RAM                |     6.099 |      134 |       135 |           99.26 |
+|   Others                 |     0.000 |       34 |       --- |             --- |
+|   F7/F8 Muxes            |     0.000 |       19 |     63400 |            0.03 |
+| Signals                  |    11.908 |     5972 |       --- |             --- |
+| Block RAM                |     6.107 |      134 |       135 |           99.26 |
 | DSPs                     |     0.209 |        1 |       240 |            0.42 |
-| I/O                      |     9.010 |       73 |       210 |           34.76 |
+| I/O                      |     8.688 |       67 |       210 |           31.90 |
 | Static Power             |     0.879 |          |           |                 |
-| Total                    |    35.184 |          |           |                 |
+| Total                    |    36.496 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -75,16 +75,16 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |    25.476 |      24.873 |      0.603 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |     0.420 |       0.327 |      0.093 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     2.528 |       2.524 |      0.004 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |    27.074 |      26.470 |      0.603 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.409 |       0.316 |      0.093 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     2.447 |       2.443 |      0.004 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vccbram   |       1.000 |     0.574 |       0.514 |      0.060 |       NA    | Unspecified | NA         |
+| Vccbram   |       1.000 |     0.575 |       0.515 |      0.060 |       NA    | Unspecified | NA         |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |       NA    | Unspecified | NA         |
@@ -142,36 +142,43 @@ Table of Contents
 +-------------------------------+-----------+
 | Name                          | Power (W) |
 +-------------------------------+-----------+
-| nexys4ddr                     |    34.305 |
-|   BloquePWM                   |     0.118 |
-|     DivisorF                  |     0.118 |
-|   camara                      |     0.103 |
-|   modulo_ir                   |     0.310 |
-|   picorv32                    |    11.072 |
-|     cpuregs_reg_r1_0_63_0_2   |     0.025 |
-|     cpuregs_reg_r1_0_63_12_14 |     0.020 |
-|     cpuregs_reg_r1_0_63_15_17 |     0.026 |
-|     cpuregs_reg_r1_0_63_18_20 |     0.026 |
-|     cpuregs_reg_r1_0_63_21_23 |     0.027 |
-|     cpuregs_reg_r1_0_63_24_26 |     0.023 |
-|     cpuregs_reg_r1_0_63_27_29 |     0.020 |
-|     cpuregs_reg_r1_0_63_30_31 |     0.014 |
-|     cpuregs_reg_r1_0_63_3_5   |     0.024 |
-|     cpuregs_reg_r1_0_63_6_8   |     0.020 |
-|     cpuregs_reg_r1_0_63_9_11  |     0.026 |
-|     cpuregs_reg_r2_0_63_0_2   |     0.046 |
-|     cpuregs_reg_r2_0_63_12_14 |     0.050 |
-|     cpuregs_reg_r2_0_63_15_17 |     0.053 |
-|     cpuregs_reg_r2_0_63_18_20 |     0.046 |
-|     cpuregs_reg_r2_0_63_21_23 |     0.049 |
-|     cpuregs_reg_r2_0_63_24_26 |     0.044 |
-|     cpuregs_reg_r2_0_63_27_29 |     0.051 |
-|     cpuregs_reg_r2_0_63_30_31 |     0.028 |
-|     cpuregs_reg_r2_0_63_3_5   |     0.044 |
-|     cpuregs_reg_r2_0_63_6_8   |     0.043 |
-|     cpuregs_reg_r2_0_63_9_11  |     0.049 |
-|     pcpi_div                  |     1.975 |
-|     pcpi_mul                  |     0.513 |
+| nexys4ddr                     |    35.617 |
+|   BloquePWM                   |     0.111 |
+|     DivisorF                  |     0.111 |
+|   bloqueultrasonido           |     0.644 |
+|     maquinadeestados0         |     0.091 |
+|       divisorfrecme0          |     0.091 |
+|     ultrasonido0              |     0.553 |
+|       contador0               |     0.142 |
+|       divisorfrec0            |     0.089 |
+|       divisorfrecd0           |     0.165 |
+|       divisorfrecgen0         |     0.157 |
+|   modulo_ir                   |     0.290 |
+|   picorv32                    |     9.876 |
+|     cpuregs_reg_r1_0_63_0_2   |     0.018 |
+|     cpuregs_reg_r1_0_63_12_14 |     0.024 |
+|     cpuregs_reg_r1_0_63_15_17 |     0.018 |
+|     cpuregs_reg_r1_0_63_18_20 |     0.020 |
+|     cpuregs_reg_r1_0_63_21_23 |     0.020 |
+|     cpuregs_reg_r1_0_63_24_26 |     0.017 |
+|     cpuregs_reg_r1_0_63_27_29 |     0.018 |
+|     cpuregs_reg_r1_0_63_30_31 |     0.012 |
+|     cpuregs_reg_r1_0_63_3_5   |     0.022 |
+|     cpuregs_reg_r1_0_63_6_8   |     0.018 |
+|     cpuregs_reg_r1_0_63_9_11  |     0.018 |
+|     cpuregs_reg_r2_0_63_0_2   |     0.026 |
+|     cpuregs_reg_r2_0_63_12_14 |     0.033 |
+|     cpuregs_reg_r2_0_63_15_17 |     0.032 |
+|     cpuregs_reg_r2_0_63_18_20 |     0.040 |
+|     cpuregs_reg_r2_0_63_21_23 |     0.038 |
+|     cpuregs_reg_r2_0_63_24_26 |     0.035 |
+|     cpuregs_reg_r2_0_63_27_29 |     0.042 |
+|     cpuregs_reg_r2_0_63_30_31 |     0.026 |
+|     cpuregs_reg_r2_0_63_3_5   |     0.035 |
+|     cpuregs_reg_r2_0_63_6_8   |     0.041 |
+|     cpuregs_reg_r2_0_63_9_11  |     0.035 |
+|     pcpi_div                  |     1.463 |
+|     pcpi_mul                  |     0.423 |
 +-------------------------------+-----------+
 
 

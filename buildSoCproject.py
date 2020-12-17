@@ -18,6 +18,7 @@ from module import vgacontroller
 from module import camara
 from module import infrarrojo
 from module import pwm
+from module import ultrasonido
 
 
 
@@ -33,11 +34,25 @@ class BaseSoC(SoCCore):
 		## add source verilog
 
 		platform.add_source("module/verilog/camara.v")
+
 		platform.add_source("module/verilog/Infrarrojo/modulo_ir.v")
+
 		platform.add_source("module/verilog/PWM/BloquePWM.v")
 		platform.add_source("module/verilog/PWM/PWM.v")
 		platform.add_source("module/verilog/PWM/MaquinaEstadosPWM.v")
 		platform.add_source("module/verilog/PWM/DivFreqPWM.v")
+
+		platform.add_source("module/verilog/Ultrasonido(NexysA7)/bloqueultrasonido.v")
+		platform.add_source("module/verilog/Ultrasonido(NexysA7)/contador.v")
+		platform.add_source("module/verilog/Ultrasonido(NexysA7)/divisor.v")
+		platform.add_source("module/verilog/Ultrasonido(NexysA7)/divisorfrec.v")
+		platform.add_source("module/verilog/Ultrasonido(NexysA7)/divisorfrecd.v")
+		platform.add_source("module/verilog/Ultrasonido(NexysA7)/divisorfrecgen.v")
+		platform.add_source("module/verilog/Ultrasonido(NexysA7)/divisorfrecme.v")
+		platform.add_source("module/verilog/Ultrasonido(NexysA7)/genpulsos.v")
+		platform.add_source("module/verilog/Ultrasonido(NexysA7)/maquinadeestados.v")
+		platform.add_source("module/verilog/Ultrasonido(NexysA7)/meultrasonido.v")
+		platform.add_source("module/verilog/Ultrasonido(NexysA7)/ultrasonido.v")
 
 
 		# SoC with CPU
@@ -89,20 +104,38 @@ class BaseSoC(SoCCore):
 		
 		
 		#camara
-		SoCCore.add_csr(self,"camara_cntrl")
+		""" SoCCore.add_csr(self,"camara_cntrl")
 		SoCCore.add_interrupt(self,"camara_cntrl")
 		cam_data_in = Cat(*[platform.request("cam_data_in", i) for i in range(8)])		
 		self.submodules.camara_cntrl = camara.Camara(platform.request("cam_xclk"),platform.request("cam_pclk"),cam_data_in)
-
+ """
 		#Infrarrojo
 		SoCCore.add_csr(self,"infrarrojo_cntrl")
-		SoCCore.add_interrupt(self,"infrarrojo_cntrl")
 		self.submodules.infrarrojo_cntrl = infrarrojo.Infrarrojo(platform.request("ir_inout"))
 
 		#PWM
 		SoCCore.add_csr(self,"pwm_cntrl")
-		# SoCCore.add_interrupt(self,"infrarrojo_cntrl")
 		self.submodules.pwm_cntrl = pwm.PWM(platform.request("pwm_out"))
+
+		#Ultrasonido
+		SoCCore.add_csr(self, "ultrasonido")
+		self.submodules.ultrasonido = ultrasonido.Ultrasonido(platform.request("us_trigger"), platform.request("us_echo"))
+
+		#UART1
+		from litex.soc.cores import uart
+		self.submodules.uart1_phy = uart.UARTPHY(
+			pads     = platform.request("uart1"),
+			clk_freq = self.sys_clk_freq,
+			baudrate = 9600)
+		self.submodules.uart1 = ResetInserter()(uart.UART(self.uart1_phy,
+			tx_fifo_depth = 16,
+			rx_fifo_depth = 16))
+		self.csr.add("uart1_phy", use_loc_if_exists=True)
+		self.csr.add("uart1", use_loc_if_exists=True)
+		if hasattr(self.cpu, "interrupt"):
+			self.irq.add("uart1", use_loc_if_exists=True)
+		else:
+			self.add_constant("UART_POLLING")
 
 # Build --------------------------------------------------------------------------------------------
 if __name__ == "__main__":

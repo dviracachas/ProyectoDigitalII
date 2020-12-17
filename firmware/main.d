@@ -11,7 +11,7 @@ main.o: main.c /opt/litex/litex/litex/soc/software/include/base/stdio.h \
  /opt/litex/litex/litex/soc/software/include/hw/common.h \
  /opt/litex/litex/litex/soc/software/include/base/uart.h \
  /opt/litex/litex/litex/soc/software/include/base/console.h delay.h \
- display.h camara.h
+ display.h camara.h uart1.h
 
 /opt/litex/litex/litex/soc/software/include/base/stdio.h:
 
@@ -44,3 +44,5 @@ delay.h:
 display.h:
 
 camara.h:
+
+uart1.h:

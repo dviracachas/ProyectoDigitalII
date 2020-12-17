@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
-| Date         : Fri Dec 11 20:18:47 2020
+| Date         : Wed Dec 16 13:28:45 2020
 | Host         : david-x555lb running 64-bit Manjaro Linux
 | Command      : report_timing_summary -datasheet -max_paths 10 -file nexys4ddr_timing.rpt
 | Design       : nexys4ddr
@@ -39,12 +39,12 @@ check_timing report
 
 Table of Contents
 -----------------
-1. checking no_clock (3112)
+1. checking no_clock (3400)
 2. checking constant_clock (0)
 3. checking pulse_width_clock (0)
-4. checking unconstrained_internal_endpoints (11893)
-5. checking no_input_delay (23)
-6. checking no_output_delay (49)
+4. checking unconstrained_internal_endpoints (12581)
+5. checking no_input_delay (16)
+6. checking no_output_delay (51)
 7. checking multiple_clock (0)
 8. checking generated_clocks (0)
 9. checking loops (0)
@@ -52,11 +52,19 @@ Table of Contents
 11. checking partial_output_delay (0)
 12. checking latch_loops (0)
 
-1. checking no_clock (3112)
+1. checking no_clock (3400)
 ---------------------------
- There are 3096 register/latch pins with no clock driven by root clock pin: clk (HIGH)
+ There are 3354 register/latch pins with no clock driven by root clock pin: clk (HIGH)
 
  There are 16 register/latch pins with no clock driven by root clock pin: BloquePWM/DivisorF/clkout_reg/Q (HIGH)
+
+ There are 2 register/latch pins with no clock driven by root clock pin: bloqueultrasonido/maquinadeestados0/divisorfrecme0/CLKOUT2_reg/Q (HIGH)
+
+ There are 10 register/latch pins with no clock driven by root clock pin: bloqueultrasonido/ultrasonido0/divisorfrec0/CLKOUT_reg/Q (HIGH)
+
+ There are 16 register/latch pins with no clock driven by root clock pin: bloqueultrasonido/ultrasonido0/divisorfrecd0/CLKOUTD_reg/Q (HIGH)
+
+ There are 2 register/latch pins with no clock driven by root clock pin: bloqueultrasonido/ultrasonido0/divisorfrecgen0/CLKOUT1_reg/Q (HIGH)
 
 
 2. checking constant_clock (0)
@@ -69,23 +77,23 @@ Table of Contents
  There are 0 register/latch pins which need pulse_width check
 
 
-4. checking unconstrained_internal_endpoints (11893)
+4. checking unconstrained_internal_endpoints (12581)
 ----------------------------------------------------
- There are 11893 pins that are not constrained for maximum delay. (HIGH)
+ There are 12581 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
 
-5. checking no_input_delay (23)
+5. checking no_input_delay (16)
 -------------------------------
- There are 23 input ports with no input delay specified. (HIGH)
+ There are 16 input ports with no input delay specified. (HIGH)
 
  There are 0 input ports with no input delay but user has a false path constraint.
 
 
-6. checking no_output_delay (49)
+6. checking no_output_delay (51)
 --------------------------------
- There are 49 ports with no output delay specified. (HIGH)
+ There are 51 ports with no output delay specified. (HIGH)
 
  There are 0 ports with no output delay but user has a false path constraint
 

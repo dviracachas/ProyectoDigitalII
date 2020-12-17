@@ -1,0 +1,124 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Tue Dec 15 21:11:44 2020
+# Process ID: 61146
+# Current directory: /home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/build/nexys4ddr/gateware
+# Command line: vivado -mode batch -source nexys4ddr.tcl
+# Log file: /home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/build/nexys4ddr/gateware/vivado.log
+# Journal file: /home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/build/nexys4ddr/gateware/vivado.jou
+#-----------------------------------------------------------
+source nexys4ddr.tcl
+# create_project -force -name nexys4ddr -part xc7a100t-CSG324-1
+# set_msg_config -id {Common 17-55} -new_severity {Warning}
+# read_verilog {/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/camara.v}
+# read_verilog {/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/Infrarrojo/modulo_ir.v}
+# read_verilog {/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/PWM/BloquePWM.v}
+# read_verilog {/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/PWM/PWM.v}
+# read_verilog {/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/PWM/MaquinaEstadosPWM.v}
+# read_verilog {/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/PWM/DivFreqPWM.v}
+# read_verilog {/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/Ultrasonido(NexysA7)/bloqueultrasonido.v}
+# read_verilog {/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/Ultrasonido(NexysA7)/contador.v}
+# read_verilog {/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/Ultrasonido(NexysA7)/divisor.v}
+# read_verilog {/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/Ultrasonido(NexysA7)/divisorfrec.v}
+# read_verilog {/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/Ultrasonido(NexysA7)/divisorfrecd.v}
+# read_verilog {/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/Ultrasonido(NexysA7)/divisorfrecgen.v}
+# read_verilog {/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/Ultrasonido(NexysA7)/divisorfrecme.v}
+# read_verilog {/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/Ultrasonido(NexysA7)/genpulsos.v}
+# read_verilog {/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/Ultrasonido(NexysA7)/maquinadeestados.v}
+# read_verilog {/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/Ultrasonido(NexysA7)/meultrasonido.v}
+# read_verilog {/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/Ultrasonido(NexysA7)/ultrasonido.v}
+# read_verilog {/opt/litex/pythondata-cpu-picorv32/pythondata_cpu_picorv32/verilog/picorv32.v}
+# read_verilog {/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/build/nexys4ddr/gateware/nexys4ddr.v}
+# read_xdc nexys4ddr.xdc
+# set_property PROCESSING_ORDER EARLY [get_files nexys4ddr.xdc]
+# synth_design -directive default -top nexys4ddr -part xc7a100t-CSG324-1
+Command: synth_design -directive default -top nexys4ddr -part xc7a100t-CSG324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 61171
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 2079.676 ; gain = 0.000 ; free physical = 793 ; free virtual = 4081
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'nexys4ddr' [/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/build/nexys4ddr/gateware/nexys4ddr.v:4]
+INFO: [Synth 8-3876] $readmem data file 'mem.init' is read successfully [/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/build/nexys4ddr/gateware/nexys4ddr.v:2496]
+INFO: [Synth 8-3876] $readmem data file 'mem_1.init' is read successfully [/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/build/nexys4ddr/gateware/nexys4ddr.v:2516]
+INFO: [Synth 8-3876] $readmem data file 'mem_2.init' is read successfully [/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/build/nexys4ddr/gateware/nexys4ddr.v:2536]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/build/nexys4ddr/gateware/nexys4ddr.v:1918]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/build/nexys4ddr/gateware/nexys4ddr.v:1926]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/build/nexys4ddr/gateware/nexys4ddr.v:1957]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/build/nexys4ddr/gateware/nexys4ddr.v:2040]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/build/nexys4ddr/gateware/nexys4ddr.v:2048]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/build/nexys4ddr/gateware/nexys4ddr.v:2116]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/build/nexys4ddr/gateware/nexys4ddr.v:2184]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/build/nexys4ddr/gateware/nexys4ddr.v:2196]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/build/nexys4ddr/gateware/nexys4ddr.v:2208]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/build/nexys4ddr/gateware/nexys4ddr.v:2298]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/build/nexys4ddr/gateware/nexys4ddr.v:2310]
+INFO: [Synth 8-6157] synthesizing module 'camara' [/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/camara.v:21]
+	Parameter AW bound to: 15 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'camara' (1#1) [/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/camara.v:21]
+INFO: [Synth 8-6157] synthesizing module 'modulo_ir' [/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/Infrarrojo/modulo_ir.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'modulo_ir' (2#1) [/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/Infrarrojo/modulo_ir.v:23]
+WARNING: [Synth 8-7071] port 'descarga' of module 'modulo_ir' is unconnected for instance 'modulo_ir' [/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/build/nexys4ddr/gateware/nexys4ddr.v:2600]
+WARNING: [Synth 8-7023] instance 'modulo_ir' of module 'modulo_ir' has 5 connections declared, but only 4 given [/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/build/nexys4ddr/gateware/nexys4ddr.v:2600]
+INFO: [Synth 8-6157] synthesizing module 'BloquePWM' [/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/PWM/BloquePWM.v:22]
+INFO: [Synth 8-6157] synthesizing module 'MaquinaEstadosPWM' [/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/PWM/MaquinaEstadosPWM.v:22]
+INFO: [Synth 8-226] default block is never used [/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/PWM/MaquinaEstadosPWM.v:31]
+INFO: [Synth 8-6155] done synthesizing module 'MaquinaEstadosPWM' (3#1) [/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/PWM/MaquinaEstadosPWM.v:22]
+WARNING: [Synth 8-689] width (1) of port connection 'grados' does not match port width (2) of module 'MaquinaEstadosPWM' [/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/PWM/BloquePWM.v:36]
+INFO: [Synth 8-6157] synthesizing module 'DivFreqPWM' [/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/PWM/DivFreqPWM.v:2]
+	Parameter top bound to: 12'b100111000100 
+INFO: [Synth 8-6155] done synthesizing module 'DivFreqPWM' (4#1) [/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/PWM/DivFreqPWM.v:2]
+INFO: [Synth 8-6157] synthesizing module 'PWM' [/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/PWM/PWM.v:23]
+	Parameter top bound to: 400 - type: integer 
+WARNING: [Synth 8-6090] variable 'contador' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/PWM/PWM.v:47]
+WARNING: [Synth 8-6090] variable 'contador' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/PWM/PWM.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'PWM' (5#1) [/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/PWM/PWM.v:23]
+WARNING: [Synth 8-689] width (3) of port connection 'grados' does not match port width (2) of module 'PWM' [/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/PWM/BloquePWM.v:47]
+INFO: [Synth 8-6155] done synthesizing module 'BloquePWM' (6#1) [/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/PWM/BloquePWM.v:22]
+INFO: [Synth 8-6157] synthesizing module 'bloqueultrasonido' [/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/Ultrasonido(NexysA7)/bloqueultrasonido.v:1]
+INFO: [Synth 8-6157] synthesizing module 'maquinadeestados' [/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/Ultrasonido(NexysA7)/maquinadeestados.v:1]
+INFO: [Synth 8-6157] synthesizing module 'meultrasonido' [/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/Ultrasonido(NexysA7)/meultrasonido.v:1]
+INFO: [Synth 8-226] default block is never used [/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/Ultrasonido(NexysA7)/meultrasonido.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'meultrasonido' (7#1) [/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/Ultrasonido(NexysA7)/meultrasonido.v:1]
+INFO: [Synth 8-6157] synthesizing module 'divisorfrecme' [/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/Ultrasonido(NexysA7)/divisorfrecme.v:1]
+	Parameter top bound to: 12'b101110111000 
+INFO: [Synth 8-6155] done synthesizing module 'divisorfrecme' (8#1) [/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/Ultrasonido(NexysA7)/divisorfrecme.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'maquinadeestados' (9#1) [/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/Ultrasonido(NexysA7)/maquinadeestados.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ultrasonido' [/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/Ultrasonido(NexysA7)/ultrasonido.v:1]
+INFO: [Synth 8-6157] synthesizing module 'divisorfrec' [/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/Ultrasonido(NexysA7)/divisorfrec.v:1]
+	Parameter top bound to: 12'b101101101100 
+INFO: [Synth 8-6155] done synthesizing module 'divisorfrec' (10#1) [/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/Ultrasonido(NexysA7)/divisorfrec.v:1]
+INFO: [Synth 8-6157] synthesizing module 'divisorfrecgen' [/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/Ultrasonido(NexysA7)/divisorfrecgen.v:1]
+	Parameter top bound to: 10'b1111101000 
+INFO: [Synth 8-6155] done synthesizing module 'divisorfrecgen' (11#1) [/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/Ultrasonido(NexysA7)/divisorfrecgen.v:1]
+INFO: [Synth 8-6157] synthesizing module 'divisorfrecd' [/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/Ultrasonido(NexysA7)/divisorfrecd.v:1]
+	Parameter top bound to: 11'b10110110110 
+INFO: [Synth 8-6155] done synthesizing module 'divisorfrecd' (12#1) [/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/Ultrasonido(NexysA7)/divisorfrecd.v:1]
+INFO: [Synth 8-6157] synthesizing module 'genpulsos' [/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/Ultrasonido(NexysA7)/genpulsos.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'genpulsos' (13#1) [/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/Ultrasonido(NexysA7)/genpulsos.v:1]
+INFO: [Synth 8-6157] synthesizing module 'contador' [/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/Ultrasonido(NexysA7)/contador.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'contador' (14#1) [/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/Ultrasonido(NexysA7)/contador.v:1]
+INFO: [Synth 8-6157] synthesizing module 'divisor' [/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/Ultrasonido(NexysA7)/divisor.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'divisor' (15#1) [/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/Ultrasonido(NexysA7)/divisor.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ultrasonido' (16#1) [/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/Ultrasonido(NexysA7)/ultrasonido.v:1]
+ERROR: [Synth 8-448] named port connection 'echo' does not exist for instance 'ultrasonido0' of module 'ultrasonido' [/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/Ultrasonido(NexysA7)/bloqueultrasonido.v:20]
+ERROR: [Synth 8-448] named port connection 'trigger' does not exist for instance 'ultrasonido0' of module 'ultrasonido' [/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/Ultrasonido(NexysA7)/bloqueultrasonido.v:22]
+ERROR: [Synth 8-448] named port connection 'done' does not exist for instance 'ultrasonido0' of module 'ultrasonido' [/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/Ultrasonido(NexysA7)/bloqueultrasonido.v:23]
+ERROR: [Synth 8-6156] failed synthesizing module 'bloqueultrasonido' [/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/Ultrasonido(NexysA7)/bloqueultrasonido.v:1]
+ERROR: [Synth 8-6156] failed synthesizing module 'nexys4ddr' [/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/build/nexys4ddr/gateware/nexys4ddr.v:4]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 2079.676 ; gain = 0.000 ; free physical = 807 ; free virtual = 4100
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+INFO: [Common 17-83] Releasing license: Synthesis
+56 Infos, 6 Warnings, 0 Critical Warnings and 6 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
+INFO: [Common 17-206] Exiting Vivado at Tue Dec 15 21:12:25 2020...

@@ -245,46 +245,6 @@ set_property IOSTANDARD LVCMOS33 [get_ports {hsync}]
 set_property LOC B12 [get_ports {vsync}]
 set_property IOSTANDARD LVCMOS33 [get_ports {vsync}]
 
-# cam_data_in:0
-set_property LOC T8 [get_ports {cam_data_in0}]
-set_property IOSTANDARD LVCMOS33 [get_ports {cam_data_in0}]
-
-# cam_data_in:1
-set_property LOC U8 [get_ports {cam_data_in1}]
-set_property IOSTANDARD LVCMOS33 [get_ports {cam_data_in1}]
-
-# cam_data_in:2
-set_property LOC R16 [get_ports {cam_data_in2}]
-set_property IOSTANDARD LVCMOS33 [get_ports {cam_data_in2}]
-
-# cam_data_in:3
-set_property LOC T13 [get_ports {cam_data_in3}]
-set_property IOSTANDARD LVCMOS33 [get_ports {cam_data_in3}]
-
-# cam_data_in:4
-set_property LOC H6 [get_ports {cam_data_in4}]
-set_property IOSTANDARD LVCMOS33 [get_ports {cam_data_in4}]
-
-# cam_data_in:5
-set_property LOC U12 [get_ports {cam_data_in5}]
-set_property IOSTANDARD LVCMOS33 [get_ports {cam_data_in5}]
-
-# cam_data_in:6
-set_property LOC U11 [get_ports {cam_data_in6}]
-set_property IOSTANDARD LVCMOS33 [get_ports {cam_data_in6}]
-
-# cam_data_in:7
-set_property LOC V10 [get_ports {cam_data_in7}]
-set_property IOSTANDARD LVCMOS33 [get_ports {cam_data_in7}]
-
-# cam_xclk:0
-set_property LOC V11 [get_ports {cam_xclk}]
-set_property IOSTANDARD LVCMOS33 [get_ports {cam_xclk}]
-
-# cam_pclk:0
-set_property LOC P18 [get_ports {cam_pclk}]
-set_property IOSTANDARD LVCMOS33 [get_ports {cam_pclk}]
-
 # ir_inout:0
 set_property LOC C17 [get_ports {ir_inout}]
 set_property IOSTANDARD LVCMOS33 [get_ports {ir_inout}]
@@ -292,6 +252,22 @@ set_property IOSTANDARD LVCMOS33 [get_ports {ir_inout}]
 # pwm_out:0
 set_property LOC D18 [get_ports {pwm_out}]
 set_property IOSTANDARD LVCMOS33 [get_ports {pwm_out}]
+
+# us_trigger:0
+set_property LOC E18 [get_ports {us_trigger}]
+set_property IOSTANDARD LVCMOS33 [get_ports {us_trigger}]
+
+# us_echo:0
+set_property LOC G17 [get_ports {us_echo}]
+set_property IOSTANDARD LVCMOS33 [get_ports {us_echo}]
+
+# uart1:0.tx
+set_property LOC D14 [get_ports {uart1_tx}]
+set_property IOSTANDARD LVCMOS33 [get_ports {uart1_tx}]
+
+# uart1:0.rx
+set_property LOC F16 [get_ports {uart1_rx}]
+set_property IOSTANDARD LVCMOS33 [get_ports {uart1_rx}]
 
 ################################################################################
 # Design constraints

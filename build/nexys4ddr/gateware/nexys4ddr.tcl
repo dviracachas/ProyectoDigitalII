@@ -12,6 +12,17 @@ read_verilog {/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_incl
 read_verilog {/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/PWM/PWM.v}
 read_verilog {/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/PWM/MaquinaEstadosPWM.v}
 read_verilog {/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/PWM/DivFreqPWM.v}
+read_verilog {/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/Ultrasonido(NexysA7)/bloqueultrasonido.v}
+read_verilog {/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/Ultrasonido(NexysA7)/contador.v}
+read_verilog {/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/Ultrasonido(NexysA7)/divisor.v}
+read_verilog {/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/Ultrasonido(NexysA7)/divisorfrec.v}
+read_verilog {/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/Ultrasonido(NexysA7)/divisorfrecd.v}
+read_verilog {/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/Ultrasonido(NexysA7)/divisorfrecgen.v}
+read_verilog {/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/Ultrasonido(NexysA7)/divisorfrecme.v}
+read_verilog {/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/Ultrasonido(NexysA7)/genpulsos.v}
+read_verilog {/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/Ultrasonido(NexysA7)/maquinadeestados.v}
+read_verilog {/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/Ultrasonido(NexysA7)/meultrasonido.v}
+read_verilog {/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/module/verilog/Ultrasonido(NexysA7)/ultrasonido.v}
 read_verilog {/opt/litex/pythondata-cpu-picorv32/pythondata_cpu_picorv32/verilog/picorv32.v}
 read_verilog {/home/davidviralo/Documentos/Vivado/ProyectoFinal/SoC_project_includeVerilog/build/nexys4ddr/gateware/nexys4ddr.v}
 

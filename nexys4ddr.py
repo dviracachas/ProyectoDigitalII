@@ -96,6 +96,15 @@ _io = [
 
     ("pwm_out", 0, Pins("D18"), IOStandard("LVCMOS33")),
 
+    ("us_trigger", 0, Pins("E18"), IOStandard("LVCMOS33")),
+    ("us_echo", 0, Pins("G17"), IOStandard("LVCMOS33")),
+
+    ("uart1", 0,
+        Subsignal("tx", Pins("D14")),
+        Subsignal("rx", Pins("F16")),
+        IOStandard("LVCMOS33"),
+    ), 
+
     ("cpu_reset", 0, Pins("C12"), IOStandard("LVCMOS33")),
     ("clk", 0, Pins("E3"), IOStandard("LVCMOS33")),
 
