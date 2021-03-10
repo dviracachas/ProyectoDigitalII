@@ -1,0 +1,12 @@
+
+module servo( 
+    input enable,
+    input dutty, 
+    output PWM
+	 )
+	 
+divisorfrec	   divisorfrec0      ( .clk(clk),.CLKOUT(CLKOUT));
+divisorfrecgen  divisorfrecgen0  	( .clk1(CLKOUT),.CLKOUT1(CLKOUT1));
+
+
+endmodule
